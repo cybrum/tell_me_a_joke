@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Jokes Free</string>
+    <string name="app_name">Tell a joke</string>
     <string name="instructions">Press the button to get a joke!</string>
     <string name="button_text">Tell Joke</string>
     <string name="action_settings">Settings</string>
-    <string name="banner_ad_unit_id">ENTER_YOUR_AD_KEY_HERE</string>
+    <string name="banner_ad_unit_id">ENTER_YOUR_AD_KEY</string>
 </resources>
