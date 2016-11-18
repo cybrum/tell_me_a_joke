@@ -18,4 +18,11 @@ public class JokesLibrary {
         return freeJoke[rndmGenerator.nextInt(freeJoke.length)];
     }
 
+    //TODO: Get Jokes from Chuck Norris API for paid users
+    //Reference: https://github.com/BoldijarPaul/JSON-Rest-API-Client-Java-Android
+    /*Context context=new Context();
+    context.setRoot("http://api.icndb.com/");
+    Joke joke=context.doGetRequest("jokes/random", Joke.class);
+    System.out.println(joke.getValue().getJoke());*/
+
 }
