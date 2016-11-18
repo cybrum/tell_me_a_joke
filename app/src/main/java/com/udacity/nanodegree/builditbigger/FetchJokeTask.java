@@ -30,7 +30,7 @@ public class FetchJokeTask extends AsyncTask<Void, Void, String> {
         if(myApiService == null) {  // Only do this once
 
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                    .setRootUrl("https://android-app-backend.appspot.com/_ah/api/");
+                    .setRootUrl("https://builtitbigger-149908.appspot.com/_ah/api/");
             // end options for devappserver
                 myApiService = builder.build();
         }
