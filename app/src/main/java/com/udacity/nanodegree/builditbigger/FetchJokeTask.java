@@ -28,17 +28,21 @@ public class FetchJokeTask extends AsyncTask<Void, Void, String> {
     @Override
     protected String doInBackground(Void... params) {
         if(myApiService == null) {  // Only do this once
+
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                     new AndroidJsonFactory(), null)
-                    .setRootUrl("http://192.168.1.9:8080/_ah/api/")
+                    // options for running against local devappserver
+                    // - 10.0.2.2 is localhost's IP address in Android emulator
+                    // - turn off compression when running against local devappserver
+                    .setRootUrl("http://192.168.2.7:8080/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override
                         public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
                             abstractGoogleClientRequest.setDisableGZipContent(true);
                         }
                     });
-
-            myApiService = builder.build();
+            // end options for devappserver
+                myApiService = builder.build();
         }
 
 
@@ -47,6 +51,7 @@ public class FetchJokeTask extends AsyncTask<Void, Void, String> {
         } catch (IOException e) {
             return e.getMessage();
         }
+
     }
 
     @Override
