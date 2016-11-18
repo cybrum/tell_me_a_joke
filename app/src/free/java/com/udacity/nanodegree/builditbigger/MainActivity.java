@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity implements FetchJokeTask.Cal
         setContentView(R.layout.activity_main);
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ADD_AD_KEY_HERE");
+        mInterstitialAd.setAdUnitId("@strings/banner_ad_unit_id");
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
