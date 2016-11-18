@@ -11,21 +11,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/instructions_text_view"
-        />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/adView"
+        android:layout_alignStart="@+id/adView"
+        android:textSize="16sp"
+        android:layout_marginRight="16dp" />
 
     <Button
         android:id="@+id/joke_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/instructions_text_view"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:text="@string/button_text"
-        android:onClick="tellJoke"/>
-
+        android:onClick="tellJoke"
+        android:layout_below="@+id/instructions_text_view"
+        android:background="@drawable/round_button"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
     <ProgressBar
         android:id="@+id/progressBar1"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/joke_button"
+        android:indeterminate="false"
+        android:layout_above="@+id/adView"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
